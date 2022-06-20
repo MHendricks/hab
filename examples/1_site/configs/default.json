@@ -1,0 +1,9 @@
+{
+    "name": "default",
+    "context": [],
+    "inherits": false,
+    "distros": [
+        "maya2023",
+        "textedit"
+    ]
+}

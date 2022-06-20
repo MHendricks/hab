@@ -1,0 +1,17 @@
+{
+    "name": "maya2023",
+    "aliases": {
+        "windows": [
+            ["maya", "C:\\Program Files\\Autodesk\\Maya2023\\bin\\maya.exe"],
+            ["maya23", "C:\\Program Files\\Autodesk\\Maya2023\\bin\\maya.exe"],
+            ["mayapy", "C:\\Program Files\\Autodesk\\Maya2023\\bin\\mayapy.exe"],
+            ["mayapy23", "C:\\Program Files\\Autodesk\\Maya2023\\bin\\mayapy.exe"]
+        ],
+        "linux": [
+            ["maya", "/usr/autodesk/maya2023/bin/maya"],
+            ["maya23", "/usr/autodesk/maya2023/bin/maya"],
+            ["mayapy", "/usr/autodesk/maya2023/bin/mayapy"],
+            ["mayapy23", "/usr/autodesk/maya2023/bin/mayapy"]
+        ]
+    }
+}

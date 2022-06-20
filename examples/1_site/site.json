@@ -1,0 +1,16 @@
+// Primary configuration of habitat for the entire studio. This could be stored on
+// a network server. It uses `{relative_root}` to specify paths relative to this
+// json file.
+{
+    "append": {
+        "config_paths": [
+            "{relative_root}/configs"
+        ],
+        "distro_paths": [
+            // This shows a common mult-version distribution setup. The * wildcard
+            // lets you group the versions of the distros by version number without
+            // conflicting.
+            "{relative_root}/distros/*"
+        ]
+    }
+}

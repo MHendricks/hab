@@ -1,0 +1,18 @@
+// Configuration made by the developer to allow for quickly testing their changes from
+// within the git repos they are developing from. This allows using hab to in a similar
+// manor as an pip editable install.
+{
+    "append": {
+        "config_paths": [
+            // The dev can add custom configurations to make it easier to test what they
+            // are working on. They can replace site defined configs, or add their own
+            // custom uri's for development.
+            "{relative_root}/configs"
+        ],
+        "distro_paths": [
+            // The dev has decided to clone their git repos directly next to this
+            // dev.json file.
+            "{relative_root}"
+        ]
+    }
+}

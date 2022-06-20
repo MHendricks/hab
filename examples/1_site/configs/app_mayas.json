@@ -1,0 +1,13 @@
+{
+    // Results in the uri `app/mayas`
+    "name": "mayas",
+    "context": ["app"],
+    "inherits": false,
+    // Add all of these distros
+    "distros": [
+        // Note: maya2020 and maya2023 define the maya alias. The last one in this
+        // list is the command that duplicate alias is assigned to.
+        "maya2020",
+        "maya2023"
+    ]
+}

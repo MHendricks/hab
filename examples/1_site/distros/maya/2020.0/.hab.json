@@ -1,0 +1,13 @@
+{
+    "name": "maya2020",
+    "aliases": {
+        "windows": [
+            ["maya", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\maya.exe"],
+            ["maya20", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\maya.exe"]
+        ],
+        "linux": [
+            ["maya", "/usr/local/bin/maya"],
+            ["maya20", "/usr/local/bin/maya"]
+        ]
+    }
+}

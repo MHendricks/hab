@@ -1,0 +1,15 @@
+// Create an textedit application to make it easy to launch a text editor.
+// For portability this example is calling the application without a full path.
+// This prevents launching multiple versions of the application but makes it
+// portable for most users.
+{
+    "name": "textedit",
+    "aliases": {
+        "windows": [
+            ["textedit", "notepad.exe"]
+        ],
+        "linux": [
+            ["textedit", "vim"]
+        ]
+    }
+}

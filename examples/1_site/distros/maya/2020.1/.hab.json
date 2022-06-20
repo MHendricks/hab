@@ -1,0 +1,17 @@
+{
+    "name": "maya2020",
+    "environment": {},
+    "aliases": {
+        "windows": [
+            ["maya", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\maya.exe"],
+            ["maya20", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\maya.exe"],
+            ["mayapy", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\mayapy.exe"],
+            ["mayapy20", "C:\\Program Files\\Autodesk\\Maya2020\\bin\\mayapy.exe"]
+        ],
+        "linux": [
+            ["maya", "/usr/local/bin/maya"],
+            ["maya20", "/usr/local/bin/maya"],
+            ["mayapy", "/usr/local/bin/mayapy"]
+        ]
+    }
+}
