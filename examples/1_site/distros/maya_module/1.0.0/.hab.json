@@ -1,15 +1,9 @@
-// Create an textedit application to make it easy to launch a text editor.
-// For portability this example is calling the application without a full path.
-// This prevents launching multiple versions of the application but makes it
-// portable for most users.
+// Include a maya module
 {
-    "name": "textedit",
-    "aliases": {
-        "windows": [
-            ["textedit", "notepad.exe"]
-        ],
-        "linux": [
-            ["textedit", "vim"]
-        ]
+    "name": "maya_module",
+    "environment": {
+        "append": {
+            "MAYA_MODULE_PATH": "{relative_root}"
+        }
     }
 }

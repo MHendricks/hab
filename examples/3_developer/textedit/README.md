@@ -7,7 +7,7 @@ for more details.
 
 ```bash
 $ hab --site /c/blur/dev/hab/examples/3_developer/dev.json --site /c/blur/dev/hab/examples/1_site/site.json dump project_a -vvv
-py -3.7
+WARNING:hab.parsers.hab_base:Can not add "C:\blur\dev\hab\examples\1_site\configs\default.json", the context "default" it is already set
 Dump of FlatConfig('default')
 -------------------------------------------------------------------------------------------------------------
 name:  default
@@ -18,10 +18,12 @@ aliases:  maya:  C:\Program Files\Autodesk\Maya2023\bin\maya.exe
           mayapy23:  C:\Program Files\Autodesk\Maya2023\bin\mayapy.exe
           textedit:  notepad.exe
 distros:  maya2023:  maya2023
+          maya_module:  maya_module
           textedit:  textedit
-
+environment:  MAYA_MODULE_PATH:  C:/blur/dev/hab/examples/1_site/distros/maya_module/1.0.0
 inherits:  False
 versions:  maya2023==2023.0:  C:\blur\dev\hab\examples\1_site\distros\maya\2023.0\.hab.json
+           maya_module==1.0.0:  C:\blur\dev\hab\examples\1_site\distros\maya_module\1.0.0\.hab.json
            textedit==1.0.0:  C:\blur\dev\hab\examples\3_developer\textedit\.hab.json
 -------------------------------------------------------------------------------------------------------------
 ````

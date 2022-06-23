@@ -3,6 +3,7 @@
     "context": [],
     "inherits": false,
     "distros": [
+        "maya2023",
         "maya_module",
         "textedit"
     ]
