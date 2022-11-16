@@ -193,6 +193,9 @@ the scripts:
 
 #### Common settings
 
+These settings are directly supported by hab, but you can store arbitrary settings in
+the site json files. This allows hab plugins to be configured by the same site files.
+
 * `colorize`: If `hab dump` should colorize its output for ease of reading.
 * `config_paths`: Configures where URI configs are discovered. See below.
 * `distro_paths`: Configures where distros discovered. See below.

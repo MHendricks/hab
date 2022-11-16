@@ -1,16 +1,29 @@
-// Primary configuration of habitat for the entire studio. This could be stored on
+// Primary configuration of hab for the entire studio. This could be stored on
 // a network server. It uses `{relative_root}` to specify paths relative to this
 // json file.
 {
+    // The `append` and `prepend` directives join the requested value with any
+    // previously defined values similar to how paths are joined in environment variables.
     "append": {
         "config_paths": [
             "{relative_root}/configs"
         ],
         "distro_paths": [
-            // This shows a common mult-version distribution setup. The * wildcard
-            // lets you group the versions of the distros by version number without
-            // conflicting.
+            // The distros folder shows a common mult-version distribution setup.
+            // The * wildcard lets you store each version of a distro in a folder with
+            // just the version for its name.
             "{relative_root}/distros/*"
         ]
+    },
+    // The `set` directive replaces this value if it was defined by another site file.
+    // The `unset` directive can be used to remove a value set by another site file.
+    "set": {
+        // These options can be configured in a site file. These are the default
+        // values for these options and can be omitted.
+        "colorize": true,
+        "prereleases": false,
+        // You can also add arbitrary values that plugins can access by using
+        // `site.get("plugin_a_example", "default")` in the plugin
+        "plugin_example": "option_1",
     }
 }
