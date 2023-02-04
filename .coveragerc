@@ -4,3 +4,6 @@ omit =
     */.tox/*
     tests/*
 show_missing = true
+
+[run]
+parallel=True
