@@ -7,4 +7,4 @@ show_missing = true
 
 [run]
 parallel=True
-relative_files
+relative_files=True
