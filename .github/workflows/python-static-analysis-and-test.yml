@@ -122,20 +122,17 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install tox
 
+      - name: Run begin
+        run: |
+          tox -e begin
+
       - name: Download Coverage
         uses: actions/download-artifact@v3
         with:
           name: coverage
 
-      - name: 'Echo download path'
-        run: echo ${{steps.coverage.outputs.download-path}}
-
       - name: Display structure of downloaded files
         run: ls -R
-
-      - name: Run begin
-        run: |
-          tox -e begin
 
       - name: Run end
         run: |
