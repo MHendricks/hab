@@ -2,7 +2,7 @@
 omit =
     */site-packages/*
     */.tox/*
-    tests/*
+    */tests/*
 show_missing = true
 
 [run]
