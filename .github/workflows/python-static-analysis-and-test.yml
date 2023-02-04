@@ -87,3 +87,8 @@ jobs:
       - name: Run end
         run: |
           tox -e end
+
+      - name: Pytest Coverage Comment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          unique-id-for-comment: ${{ matrix.python-version }}
