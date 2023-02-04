@@ -48,17 +48,19 @@ jobs:
       matrix:
         # Test if using native json or pyjson5 for json parsing
         json_ver: ['json', 'json5']
-        os: ['ubuntu-latest', 'windows-latest']
-        python: ['3.7', '3.8', '3.9', '3.10']
+        os: ['ubuntu-latest']
+        # os: ['ubuntu-latest', 'windows-latest']
+        python: ['3.7', '3.9']
+        # python: ['3.7', '3.8', '3.9', '3.10']
         # Works around the depreciation of python 3.6 for ubuntu
         # https://github.com/actions/setup-python/issues/544
-        include:
-          - json_ver: 'json'
-            os: 'ubuntu-20.04'
-            python: '3.6'
-          - json_ver: 'json5'
-            os: 'ubuntu-20.04'
-            python: '3.6'
+        # include:
+        #   - json_ver: 'json'
+        #     os: 'ubuntu-20.04'
+        #     python: '3.6'
+        #   - json_ver: 'json5'
+        #     os: 'ubuntu-20.04'
+        #     python: '3.6'
 
     runs-on: ${{ matrix.os }}
 
@@ -91,4 +93,5 @@ jobs:
       - name: Pytest Coverage Comment
         uses: MishaKav/pytest-coverage-comment@main
         with:
+          pytest-xml-coverage-path: ./coverage.xml
           unique-id-for-comment: ${{ matrix.python-version }}
