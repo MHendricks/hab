@@ -122,6 +122,10 @@ jobs:
           python -m pip install tox
 
       - uses: actions/download-artifact@v3
+        id: download
+
+      - name: 'Echo download path'
+        run: echo ${{steps.coverage.outputs.download-path}}
 
       - name: Display structure of downloaded files
         run: ls -R
