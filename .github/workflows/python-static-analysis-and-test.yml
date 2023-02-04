@@ -76,23 +76,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install tox
 
-      - name: Run begin
-        run: |
-          tox -e begin
-
       - name: Run Tox
         run: |
-          tox -e py-${{ matrix.json_ver }}
+          tox -e begin,py-${{ matrix.json_ver }}
 
-      # - name: Run end
-      #   run: |
-      #     tox -e end
-
-      - uses: actions/upload-artifact@v3
+      - name: Upload coverage
+        uses: actions/upload-artifact@v3
         with:
           name: coverage
-          # name: ${{ matrix.os }}-${{ matrix.python }}-${{ matrix.json_ver }}
           path: .coverage.*
+          retention-days: 1
 
   coverage:
     # We want to run on external PRs, but not on our own internal PRs as they'll
@@ -119,19 +112,18 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install tox
 
+      # Ensure version.py is created so coverage can read it's source
       - name: Run begin
         run: |
           tox -e begin
 
-      - name: Download Coverage
+      - name: Download coverage artifacts
         uses: actions/download-artifact@v3
         with:
           name: coverage
 
-      - name: Display structure of downloaded files
-        run: ls -R
-
-      - name: Run end
+      # Tox runs `coverage combine` and `coverage xml`
+      - name: Combine coverage and report
         run: |
           tox -e end
 
