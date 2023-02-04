@@ -133,6 +133,10 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
+      - name: Run begin
+        run: |
+          tox -e begin
+
       - name: Run end
         run: |
           tox -e end
